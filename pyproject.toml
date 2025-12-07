@@ -1,0 +1,52 @@
+toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "book-catalog-system"
+version = "1.0.0"
+description = "Система управления книжным каталогом"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Динара", email = "dinara@example.com"},
+    {name = "Маргарита", email = "margarita@example.com"},
+    {name = "Елизавета", email = "elizabeth@example.com"},
+]
+
+dependencies = [
+    "Flask>=2.0.0",
+    "python-dateutil>=2.8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "flake8>=6.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mkdocs>=1.4.0",
+    "mkdocs-material>=8.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/YOUR_USERNAME/book-catalog-system"
+Repository = "https://github.com/YOUR_USERNAME/book-catalog-system.git"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=src --cov-report=term-missing"
