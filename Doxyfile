@@ -1,0 +1,8 @@
+PROJECT_NAME           = "Лабораторная 6"
+PROJECT_NUMBER         = 1.0
+OUTPUT_DIRECTORY       = docs
+GENERATE_HTML          = YES
+INPUT                  = .
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+JAVADOC_AUTOBRIEF      = YES
